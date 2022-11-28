@@ -3,17 +3,18 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import GlobalStyle from './theme/global.style';
 import theme from './theme';
 import Layout from './routes/Layout';
+import { NavigationLinks } from './configurations/navigation';
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       {
-        path: '/',
+        path: NavigationLinks.Home,
         element: <div>Home</div>
       },
       {
-        path: '*',
+        path: NavigationLinks.Error404,
         element: <div>404</div>
       }
     ]
