@@ -8,4 +8,10 @@ export default createGlobalStyle`
   body {
     font-family: 'Sora', sans-serif;
   }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 `;
