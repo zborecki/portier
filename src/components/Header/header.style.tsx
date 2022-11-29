@@ -1,18 +1,29 @@
 import styled from 'styled-components';
 
+// ${({ theme: { components: { header } } }) => header.background};
+
 export const HeaderRoot = styled.header`
-  background-color: darkcyan;
+  padding: 18px 0px;
+  background-color: yellowgreen;
 
   .header {
+    &__interaction {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
     &__navigation {
       .navigation {
         &__link {
+          transition: color 0.2s ease-out;
+          text-transform: capitalize;
           color: ${({ theme: { components: { header: { navigation } } } }) => navigation.default};
           font-size: ${({ theme: { font: { button: { secondary } } } }) => secondary.fontSize};
           font-weight: ${({ theme: { font: { button: { secondary } } } }) => secondary.fontWeight};
           line-height: ${({ theme: { font: { button: { secondary } } } }) => secondary.lineHeight};
 
-          &.active {
+          &.active, &:hover {
             color: ${({ theme: { components: { header: { navigation } } } }) => navigation.active};
           }
         }

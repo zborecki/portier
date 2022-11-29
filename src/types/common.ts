@@ -2,6 +2,12 @@ export type BaseStatesType = {
   [state in 'default' | 'active']: string;
 };
 
+export type ButtonThemeType = {
+  [variant in 'secondary']: {
+    background: BaseStatesType;
+  }
+};
+
 export type CommonThemeType = {
   background: string;
 };

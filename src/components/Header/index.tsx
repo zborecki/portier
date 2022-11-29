@@ -1,7 +1,7 @@
 import { RouteObject } from 'react-router-dom';
 import { NavigationLinks } from '../../configurations/navigation';
 import Navigation from '../Navigation';
-import { Wrapper } from '../styled.components';
+import { Button, Wrapper } from '../styled.components';
 import { HeaderRoot } from './header.style';
 
 const navigationItems: RouteObject[] = [
@@ -14,7 +14,7 @@ const navigationItems: RouteObject[] = [
     path: NavigationLinks.Portfolio
   },
   {
-    element: 'About Me',
+    element: 'About me',
     path: NavigationLinks.AboutMe
   },
   {
@@ -32,7 +32,14 @@ const Header = (): JSX.Element => (
           className="header__navigation"
           navigationItems={navigationItems}
         />
-        Button
+        <Button
+          className="header__button"
+          size="small"
+          to="/"
+          variant="secondary"
+        >
+          Get template
+        </Button>
       </div>
     </Wrapper>
   </HeaderRoot>
