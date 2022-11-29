@@ -1,3 +1,7 @@
+export type BaseTypographyType = {
+  color: string;
+};
+
 export type BaseStatesType = {
   [state in 'default' | 'active']: string;
 };
@@ -21,6 +25,10 @@ export interface IFontTheme {
     secondary: TypographyType
   }
 }
+
+export type LogoThemeType = {
+  [variant in 'primary' | 'secondary']: BaseTypographyType
+};
 
 export type TypographyType = {
   fontSize: string;

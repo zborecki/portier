@@ -6,7 +6,7 @@ enum FontWeight {
   'Bold' = 700
 }
 
-const colors = {
+const { secondary, neutrals } = {
   secondary: {
     royalOrange: '#FA8F54'
   },
@@ -25,21 +25,33 @@ export default {
   components: {
     button: {
       common: {
-        color: colors.neutrals.white,
+        color: neutrals.white,
         padding: '14px 24px'
       },
       secondary: {
         background: {
-          default: colors.neutrals.darkGunmetal,
-          active: colors.secondary.royalOrange
+          default: neutrals.darkGunmetal,
+          active: secondary.royalOrange
         }
       }
     },
     header: {
-      background: colors.neutrals.chineseBlack,
+      background: neutrals.chineseBlack,
       navigation: {
-        active: colors.neutrals.white,
-        default: colors.neutrals.philippineGray
+        active: neutrals.white,
+        default: neutrals.philippineGray
+      }
+    },
+    logo: {
+      font: {
+        fontSize: '27px',
+        fontWeight: FontWeight.Bold
+      },
+      primary: {
+        color: neutrals.white
+      },
+      secondary: {
+        color: secondary.royalOrange
       }
     }
   },

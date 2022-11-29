@@ -1,6 +1,6 @@
 import 'styled-components';
 import {
-  CommonThemeType, IFontTheme, BaseStatesType, ButtonThemeType
+  CommonThemeType, IFontTheme, BaseStatesType, ButtonThemeType, LogoThemeType, TypographyType
 } from './src/types/common';
 
 declare module 'styled-components' {
@@ -14,6 +14,9 @@ declare module 'styled-components' {
           padding: string;
           color: string;
         }
+      },
+      logo: LogoThemeType & {
+        font: TypographyType
       },
       header: CommonThemeType & {
         navigation: BaseStatesType

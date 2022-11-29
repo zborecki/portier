@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-// ${({ theme: { components: { header } } }) => header.background};
-
 export const HeaderRoot = styled.header`
   padding: 18px 0px;
-  background-color: yellowgreen;
+  background-color: ${({ theme: { components: { header } } }) => header.background};
 
   .header {
     &__interaction {

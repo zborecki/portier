@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import GlobalStyle from './theme/global.style';
 import theme from './theme';
 import Layout from './routes/Layout';
-import { NavigationLinks } from './configurations/navigation';
+import { NavigationLinks } from './configurations/settings';
 
 const router = createBrowserRouter([
   {

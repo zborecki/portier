@@ -9,6 +9,10 @@ export interface ButtonProps extends BaseProps {
   size?: 'small';
 }
 
+export interface LogoProps extends BaseProps {
+  variant?: 'primary' | 'secondary';
+}
+
 export interface NavigationProps extends BaseProps {
   navigationItems: RouteObject[];
 }

@@ -1,24 +1,27 @@
 import { RouteObject } from 'react-router-dom';
-import { NavigationLinks } from '../../configurations/navigation';
+import phrases from '../../configurations/phrases';
+import { NavigationLinks } from '../../configurations/settings';
+import Logo from '../Logo';
 import Navigation from '../Navigation';
 import { Button, Wrapper } from '../styled.components';
 import { HeaderRoot } from './header.style';
 
+const { navigation, button } = phrases;
 const navigationItems: RouteObject[] = [
   {
-    element: 'Home',
+    element: navigation.home,
     path: NavigationLinks.Home
   },
   {
-    element: 'Portfolio',
+    element: navigation.portfolio,
     path: NavigationLinks.Portfolio
   },
   {
-    element: 'About me',
+    element: navigation.aboutMe,
     path: NavigationLinks.AboutMe
   },
   {
-    element: 'Blog',
+    element: navigation.blog,
     path: NavigationLinks.Blog
   }
 ];
@@ -26,7 +29,7 @@ const navigationItems: RouteObject[] = [
 const Header = (): JSX.Element => (
   <HeaderRoot className="header">
     <Wrapper className="header__wrapper">
-      Logo
+      <Logo className="header__logo" />
       <div className="header__interaction">
         <Navigation
           className="header__navigation"
@@ -38,7 +41,7 @@ const Header = (): JSX.Element => (
           to="/"
           variant="secondary"
         >
-          Get template
+          { button.getTemplate }
         </Button>
       </div>
     </Wrapper>
