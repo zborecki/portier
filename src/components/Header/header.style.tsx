@@ -11,9 +11,9 @@ export const HeaderRoot = styled.header`
           transition: color 0.2s ease-out;
           text-transform: capitalize;
           color: ${({ theme: { components: { header: { navigation } } } }) => navigation.default};
-          font-size: ${({ theme: { font: { button: { secondary } } } }) => secondary.fontSize};
-          font-weight: ${({ theme: { font: { button: { secondary } } } }) => secondary.fontWeight};
-          line-height: ${({ theme: { font: { button: { secondary } } } }) => secondary.lineHeight};
+          font-size: ${({ theme: { font: { button: { small } } } }) => small.fontSize};
+          font-weight: ${({ theme: { font: { button: { small } } } }) => small.fontWeight};
+          line-height: ${({ theme: { font: { button: { small } } } }) => small.lineHeight};
 
           &.active, &:hover {
             color: ${({ theme: { components: { header: { navigation } } } }) => navigation.active};

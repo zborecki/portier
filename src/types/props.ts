@@ -5,8 +5,8 @@ export interface BaseProps {
 }
 
 export interface ButtonProps extends BaseProps {
-  variant?: 'secondary';
-  size?: 'small';
+  variant?: 'secondary' | 'primary';
+  size?: 'small' | 'standard';
 }
 
 export interface HeadlineProps extends BaseProps {
@@ -20,4 +20,9 @@ export interface LogoProps extends BaseProps {
 
 export interface NavigationProps extends BaseProps {
   navigationItems: RouteObject[];
+}
+
+export interface TextProps extends BaseProps {
+  variant: 'body-large' | 'body-small' | 'caption-large' | 'caption-small';
+  bold?: boolean;
 }

@@ -8,7 +8,8 @@ enum FontWeight {
 
 const { primary, secondary, neutrals } = {
   primary: {
-    aquamarine: '#57EFB4'
+    aquamarine: '#57EFB4',
+    blue: '#006ADA'
   },
   secondary: {
     royalOrange: '#FA8F54'
@@ -25,7 +26,7 @@ export default {
   common: {
     borderRadius: 8,
     section: {
-      background: neutrals.darkGunmetal
+      background: neutrals.chineseBlack
     }
   },
   components: {
@@ -33,6 +34,12 @@ export default {
       common: {
         color: neutrals.white,
         padding: '14px 24px'
+      },
+      primary: {
+        background: {
+          default: primary.blue,
+          active: primary.aquamarine
+        }
       },
       secondary: {
         background: {
@@ -73,10 +80,16 @@ export default {
   },
   font: {
     button: {
-      secondary: {
+      common: {
+        fontWeight: FontWeight.Bold
+      },
+      small: {
         fontSize: '14px',
-        fontWeight: FontWeight.Bold,
         lineHeight: '20px'
+      },
+      standard: {
+        fontSize: '16px',
+        lineHeight: '24px'
       }
     },
     headline: {
@@ -84,6 +97,34 @@ export default {
         fontSize: '72px',
         lineHeight: '86px',
         letterSpacing: '-0.02em'
+      }
+    },
+    text: {
+      color: neutrals.philippineGray,
+      type: {
+        standard: FontWeight.Regular,
+        bolder: FontWeight.SemiBold
+      },
+      body: {
+        large: {
+          fontSize: '24px',
+          lineHeight: '32px',
+          letterSpacing: '-0.01em'
+        },
+        small: {
+          fontSize: '16px',
+          lineHeight: '24px'
+        }
+      },
+      caption: {
+        large: {
+          fontSize: '14px',
+          lineHeight: '24px'
+        },
+        small: {
+          fontSize: '12px',
+          lineHeight: '20px'
+        }
       }
     }
   }

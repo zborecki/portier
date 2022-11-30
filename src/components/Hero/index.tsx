@@ -2,10 +2,11 @@ import phrases from '../../configurations/phrases';
 import { HeroRoot } from './hero.style';
 import { highlightText } from '../../utils';
 import globalStyles from '../../theme/global_.module.css';
-import { Headline } from '../styled.components';
+import styles from './hero_.module.css';
+import { Button, Headline, Text } from '../styled.components';
 import { RangeType } from '../../types/common';
 
-const { hero } = phrases;
+const { hero, button } = phrases;
 const headlineRange: RangeType = {
   lower: 1,
   upper: 1
@@ -14,13 +15,27 @@ const headlineRange: RangeType = {
 const Hero = (): JSX.Element => (
   <HeroRoot className="hero">
     <div className={`${globalStyles.wrapper} hero__wrapper`}>
-      <Headline
-        className="hero__headline"
-        variant="h1"
-        dot
-      >
-        { highlightText(hero.headline, headlineRange) }
-      </Headline>
+      <div className={`${styles.information} hero__information`}>
+        <Headline
+          className="hero__headline"
+          variant="h1"
+          dot
+        >
+          { highlightText(hero.headline, headlineRange) }
+        </Headline>
+        <Text
+          variant="body-large"
+          className={`${globalStyles.newLine} ${styles.description} hero__description`}
+        >
+          { hero.description }
+        </Text>
+        <Button
+          className="hero__button"
+          to="/"
+        >
+          { button.hireMe }
+        </Button>
+      </div>
     </div>
   </HeroRoot>
 );
