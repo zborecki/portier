@@ -3,9 +3,10 @@ import phrases from '../../configurations/phrases';
 import { NavigationLinks } from '../../configurations/settings';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
-import { Button, Wrapper } from '../styled.components';
+import { Button } from '../styled.components';
 import { HeaderRoot } from './header.style';
 import styles from './header_.module.css';
+import globalStyles from '../../theme/global_.module.css';
 
 const { navigation, button } = phrases;
 const navigationItems: RouteObject[] = [
@@ -29,7 +30,7 @@ const navigationItems: RouteObject[] = [
 
 const Header = (): JSX.Element => (
   <HeaderRoot className="header">
-    <Wrapper className={styles.wrapper}>
+    <div className={`${globalStyles.wrapper} ${styles.wrapper}`}>
       <Logo className="header__logo" />
       <div className={styles.interaction}>
         <Navigation
@@ -45,7 +46,7 @@ const Header = (): JSX.Element => (
           { button.getTemplate }
         </Button>
       </div>
-    </Wrapper>
+    </div>
   </HeaderRoot>
 );
 

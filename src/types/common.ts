@@ -20,14 +20,23 @@ type ExtendedTypographyType = {
   [property in 'lineHeight' | 'letterSpacing']?: string;
 };
 
+type HeadlinesType = {
+  [headline in 'h1']: TypographyType
+};
+
 export interface IFontTheme {
   button: {
     secondary: TypographyType
-  }
+  },
+  headline: HeadlinesType
 }
 
 export type LogoThemeType = {
   [variant in 'primary' | 'secondary']: BaseTypographyType
+};
+
+export type RangeType = {
+  [type in 'lower' | 'upper']: number;
 };
 
 export type TypographyType = {

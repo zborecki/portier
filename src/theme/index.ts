@@ -6,7 +6,10 @@ enum FontWeight {
   'Bold' = 700
 }
 
-const { secondary, neutrals } = {
+const { primary, secondary, neutrals } = {
+  primary: {
+    aquamarine: '#57EFB4'
+  },
   secondary: {
     royalOrange: '#FA8F54'
   },
@@ -20,7 +23,10 @@ const { secondary, neutrals } = {
 
 export default {
   common: {
-    borderRadius: 8
+    borderRadius: 8,
+    section: {
+      background: neutrals.darkGunmetal
+    }
   },
   components: {
     button: {
@@ -42,6 +48,16 @@ export default {
         default: neutrals.philippineGray
       }
     },
+    headline: {
+      color: neutrals.white,
+      fontWeight: FontWeight.Bold,
+      dot: {
+        color: primary.aquamarine
+      }
+    },
+    highlightText: {
+      color: neutrals.philippineGray
+    },
     logo: {
       font: {
         fontSize: '27px',
@@ -61,6 +77,13 @@ export default {
         fontSize: '14px',
         fontWeight: FontWeight.Bold,
         lineHeight: '20px'
+      }
+    },
+    headline: {
+      h1: {
+        fontSize: '72px',
+        lineHeight: '86px',
+        letterSpacing: '-0.02em'
       }
     }
   }

@@ -9,6 +9,11 @@ export interface ButtonProps extends BaseProps {
   size?: 'small';
 }
 
+export interface HeadlineProps extends BaseProps {
+  variant: 'h1';
+  dot?: boolean;
+}
+
 export interface LogoProps extends BaseProps {
   variant?: 'primary' | 'secondary';
 }

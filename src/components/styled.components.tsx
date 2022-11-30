@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { ButtonProps } from '../types/props';
+import { ButtonProps, HeadlineProps } from '../types/props';
 
 export const Button = styled(Link)<ButtonProps>`
   // Common properties
@@ -30,8 +30,29 @@ export const Button = styled(Link)<ButtonProps>`
   }
 `;
 
-export const Wrapper = styled.div`
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0px 90px;
+export const Headline = styled.h1<HeadlineProps>`
+  // Common properties
+  color: ${({ theme: { components: { headline } } }) => headline.color};
+  font-weight: ${({ theme: { components: { headline } } }) => headline.fontWeight};
+
+  // Variants
+  font-size: ${({ variant, theme: { font: { headline: { h1 } } } }) => (
+    (variant === 'h1' && h1.fontSize)
+  )};
+  line-height: ${({ variant, theme: { font: { headline: { h1 } } } }) => (
+    (variant === 'h1' && h1.lineHeight)
+  )};
+  letter-spacing: ${({ variant, theme: { font: { headline: { h1 } } } }) => (
+    (variant === 'h1' && h1.letterSpacing)
+  )};
+
+  &::after {
+    content: '.';
+    display: ${({ dot }) => (dot ? 'inline' : 'none')};
+    color: ${({ theme: { components: { headline: { dot } } } }) => dot.color};
+  }
+`;
+
+export const HighlightText = styled.span`
+  color: ${({ theme: { components: { highlightText } } }) => highlightText.color};
 `;

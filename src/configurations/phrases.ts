@@ -5,6 +5,9 @@ export default {
   common: {
     companyName: 'Portier'
   },
+  hero: {
+    headline: 'Digital Product Designer'
+  },
   navigation: {
     home: 'Home',
     portfolio: 'Portfolio',

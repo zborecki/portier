@@ -8,4 +8,8 @@ export default createGlobalStyle`
   body {
     font-family: 'Sora', sans-serif;
   }
+
+  section {
+    padding: 120px 0px;
+  }
 `;
