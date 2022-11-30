@@ -5,12 +5,6 @@ export const HeaderRoot = styled.header`
   background-color: ${({ theme: { components: { header } } }) => header.background};
 
   .header {
-    &__interaction {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
     &__navigation {
       .navigation {
         &__link {
@@ -31,12 +25,6 @@ export const HeaderRoot = styled.header`
           gap: 40px;
         }
       }
-    }
-
-    &__wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
   }
 `;

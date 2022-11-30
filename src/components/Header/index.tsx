@@ -5,6 +5,7 @@ import Logo from '../Logo';
 import Navigation from '../Navigation';
 import { Button, Wrapper } from '../styled.components';
 import { HeaderRoot } from './header.style';
+import styles from './header_.module.css';
 
 const { navigation, button } = phrases;
 const navigationItems: RouteObject[] = [
@@ -28,9 +29,9 @@ const navigationItems: RouteObject[] = [
 
 const Header = (): JSX.Element => (
   <HeaderRoot className="header">
-    <Wrapper className="header__wrapper">
+    <Wrapper className={styles.wrapper}>
       <Logo className="header__logo" />
-      <div className="header__interaction">
+      <div className={styles.interaction}>
         <Navigation
           className="header__navigation"
           navigationItems={navigationItems}

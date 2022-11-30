@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { NavigationProps } from '../../types/props';
-import { NavigationList } from './navigation.style';
+import styles from './navigation_.module.css';
 
 const Navigation = ({ className, navigationItems }: NavigationProps): JSX.Element => (
   <nav className={className}>
-    <NavigationList className="navigation__list">
+    <ul className={`${styles.list} navigation__list`}>
       {
         navigationItems.map(({ element, path }) => (
           <li
@@ -12,7 +12,7 @@ const Navigation = ({ className, navigationItems }: NavigationProps): JSX.Elemen
             key={element as string}
           >
             <NavLink
-              className="navigation__link"
+              className={`${styles.link} navigation__link`}
               end
               to={path as string}
             >
@@ -21,7 +21,7 @@ const Navigation = ({ className, navigationItems }: NavigationProps): JSX.Elemen
           </li>
         ))
       }
-    </NavigationList>
+    </ul>
   </nav>
 );
 

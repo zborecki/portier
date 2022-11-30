@@ -2,6 +2,7 @@ import { useTheme } from 'styled-components';
 import phrases from '../../configurations/phrases';
 import { LogoProps } from '../../types/props';
 import { LogoLogotype } from './logo.style';
+import styles from './logo_.module.css';
 
 const { common: { companyName } } = phrases;
 
@@ -10,7 +11,7 @@ const Logo = ({ className, variant }: LogoProps): JSX.Element => {
   const isNightMode = (variant === 'primary' || !variant) ? primary.color : secondary.color;
 
   return (
-    <div className={`${className} logo`}>
+    <div className={`${className} ${styles.root}`}>
       <svg
         className="logo__logomark"
         width="44"
