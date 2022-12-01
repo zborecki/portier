@@ -48,7 +48,7 @@ export const CardRoot = styled.div`
 
       > rect, line, path, polyline {
         stroke: ${({ theme: { components: { card: { shape: { icon } } } } }) => icon.default};
-        transition: background ${transitionDuration} ease-out;
+        transition: stroke ${transitionDuration} ease-out;
       }
     }
 
