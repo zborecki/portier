@@ -1,26 +1,39 @@
 import 'styled-components';
 import {
-  CommonThemeType, IFontTheme, BaseStatesType, ButtonThemeType, LogoThemeType, TypographyType
+  CommonThemeType,
+  IFontTheme,
+  BaseStatesType,
+  ButtonThemeType,
+  LogoThemeType,
+  TypographyType,
+  BaseTypographyType,
+  CardThemeType
 } from './src/types/common';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     common: {
       borderRadius: number;
+      section: CommonThemeType;
     },
     components: {
       button: ButtonThemeType & {
-        common: {
+        common: BaseTypographyType & {
           padding: string;
-          color: string;
         }
       },
+      card: CardThemeType,
       logo: LogoThemeType & {
         font: TypographyType
       },
       header: CommonThemeType & {
         navigation: BaseStatesType
+      },
+      headline: BaseTypographyType & {
+        fontWeight: number;
+        dot: BaseTypographyType
       }
+      highlightText: BaseTypographyType
     }
     font: IFontTheme
   }

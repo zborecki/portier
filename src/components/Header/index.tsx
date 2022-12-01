@@ -1,10 +1,12 @@
 import { RouteObject } from 'react-router-dom';
-import phrases from '../../configurations/phrases';
+import phrases from '../../configurations/dictionary';
 import { NavigationLinks } from '../../configurations/settings';
 import Logo from '../Logo';
 import Navigation from '../Navigation';
-import { Button, Wrapper } from '../styled.components';
+import { Button } from '../styled.components';
 import { HeaderRoot } from './header.style';
+import styles from './header_.module.css';
+import globalStyles from '../../theme/global_.module.css';
 
 const { navigation, button } = phrases;
 const navigationItems: RouteObject[] = [
@@ -28,9 +30,9 @@ const navigationItems: RouteObject[] = [
 
 const Header = (): JSX.Element => (
   <HeaderRoot className="header">
-    <Wrapper className="header__wrapper">
+    <div className={`${globalStyles.wrapper} ${styles.wrapper}`}>
       <Logo className="header__logo" />
-      <div className="header__interaction">
+      <div className={styles.interaction}>
         <Navigation
           className="header__navigation"
           navigationItems={navigationItems}
@@ -44,7 +46,7 @@ const Header = (): JSX.Element => (
           { button.getTemplate }
         </Button>
       </div>
-    </Wrapper>
+    </div>
   </HeaderRoot>
 );
 

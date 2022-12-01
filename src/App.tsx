@@ -4,6 +4,7 @@ import GlobalStyle from './theme/global.style';
 import theme from './theme';
 import Layout from './routes/Layout';
 import { NavigationLinks } from './configurations/settings';
+import Home from './routes/Home';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: NavigationLinks.Home,
-        element: <div>Home</div>
+        element: <Home />
       },
       {
         path: NavigationLinks.Error404,

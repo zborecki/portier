@@ -5,21 +5,15 @@ export const HeaderRoot = styled.header`
   background-color: ${({ theme: { components: { header } } }) => header.background};
 
   .header {
-    &__interaction {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
     &__navigation {
       .navigation {
         &__link {
           transition: color 0.2s ease-out;
           text-transform: capitalize;
           color: ${({ theme: { components: { header: { navigation } } } }) => navigation.default};
-          font-size: ${({ theme: { font: { button: { secondary } } } }) => secondary.fontSize};
-          font-weight: ${({ theme: { font: { button: { secondary } } } }) => secondary.fontWeight};
-          line-height: ${({ theme: { font: { button: { secondary } } } }) => secondary.lineHeight};
+          font-size: ${({ theme: { font: { button: { small } } } }) => small.fontSize};
+          font-weight: ${({ theme: { font: { button: { common } } } }) => common.fontWeight};
+          line-height: ${({ theme: { font: { button: { small } } } }) => small.lineHeight};
 
           &.active, &:hover {
             color: ${({ theme: { components: { header: { navigation } } } }) => navigation.active};
@@ -31,12 +25,6 @@ export const HeaderRoot = styled.header`
           gap: 40px;
         }
       }
-    }
-
-    &__wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
   }
 `;

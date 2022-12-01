@@ -1,0 +1,9 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 90px;
+}
+
+.newLine {
+  white-space: pre-line;
+}
