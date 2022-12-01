@@ -48,6 +48,29 @@ export default {
         }
       }
     },
+    card: {
+      shape: {
+        background: {
+          default: neutrals.darkGunmetal,
+          active: primary.aquamarine
+        },
+        icon: {
+          default: neutrals.white,
+          active: neutrals.chineseBlack
+        }
+      },
+      wrapper: {
+        default: neutrals.chineseBlack,
+        active: neutrals.darkGunmetal
+      },
+      description: {
+        default: neutrals.philippineGray,
+        active: neutrals.white
+      },
+      headline: {
+        color: neutrals.white
+      }
+    },
     header: {
       background: neutrals.chineseBlack,
       navigation: {

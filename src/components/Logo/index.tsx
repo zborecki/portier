@@ -1,5 +1,5 @@
 import { useTheme } from 'styled-components';
-import phrases from '../../configurations/phrases';
+import phrases from '../../configurations/dictionary';
 import { LogoProps } from '../../types/props';
 import { LogoLogotype } from './logo.style';
 import styles from './logo_.module.css';

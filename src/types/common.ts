@@ -1,3 +1,5 @@
+import { IconProps } from 'phosphor-react';
+
 export type BaseTypographyType = {
   color: string;
 };
@@ -6,10 +8,36 @@ export type BaseStatesType = {
   [state in 'default' | 'active']: string;
 };
 
+type BoldParagraphsType = {
+  [type in 'button']: {
+    [paragraph in 'small' | 'standard']: TypographyType
+  } & {
+    common: {
+      fontWeight: number;
+    }
+  }
+};
+
 export type ButtonThemeType = {
   [variant in 'secondary' | 'primary']: {
     background: BaseStatesType;
   }
+};
+
+export type CardThemeType = {
+  headline: BaseTypographyType;
+} & {
+  [state in 'wrapper' | 'description']: BaseStatesType
+} & {
+  shape: {
+    [shape in 'background' | 'icon']: BaseStatesType
+  }
+};
+
+export type CardType = {
+  Icon: PhosphorIconType
+} & {
+  [text in 'title' | 'description']: string
 };
 
 export type CommonThemeType = {
@@ -33,15 +61,9 @@ export type LogoThemeType = {
   [variant in 'primary' | 'secondary']: BaseTypographyType
 };
 
-type BoldParagraphsType = {
-  [type in 'button']: {
-    [paragraph in 'small' | 'standard']: TypographyType
-  } & {
-    common: {
-      fontWeight: number;
-    }
-  }
-};
+export type PhosphorIconType = (
+  React.ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>
+);
 
 export type RangeType = {
   [type in 'lower' | 'upper']: number;

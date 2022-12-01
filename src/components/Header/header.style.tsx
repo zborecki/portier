@@ -12,7 +12,7 @@ export const HeaderRoot = styled.header`
           text-transform: capitalize;
           color: ${({ theme: { components: { header: { navigation } } } }) => navigation.default};
           font-size: ${({ theme: { font: { button: { small } } } }) => small.fontSize};
-          font-weight: ${({ theme: { font: { button: { small } } } }) => small.fontWeight};
+          font-weight: ${({ theme: { font: { button: { common } } } }) => common.fontWeight};
           line-height: ${({ theme: { font: { button: { small } } } }) => small.lineHeight};
 
           &.active, &:hover {

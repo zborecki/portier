@@ -6,7 +6,8 @@ import {
   ButtonThemeType,
   LogoThemeType,
   TypographyType,
-  BaseTypographyType
+  BaseTypographyType,
+  CardThemeType
 } from './src/types/common';
 
 declare module 'styled-components' {
@@ -21,6 +22,7 @@ declare module 'styled-components' {
           padding: string;
         }
       },
+      card: CardThemeType,
       logo: LogoThemeType & {
         font: TypographyType
       },

@@ -75,12 +75,18 @@ export const Text = styled.p<TextProps>`
     bold ? type.bolder : type.standard)};
   color: ${({ theme: { font: { text } } }) => text.color};
 
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
   // Variants
-  font-size: ${({ variant, theme: { font: { text: { body } } } }) => (
+  font-size: ${({ variant, theme: { font: { text: { body, caption } } } }) => (
     (variant === 'body-large' && body.large.fontSize)
+    || (variant === 'caption-large' && caption.large.fontSize)
   )};
-  line-height: ${({ variant, theme: { font: { text: { body } } } }) => (
+  line-height: ${({ variant, theme: { font: { text: { body, caption } } } }) => (
     (variant === 'body-large' && body.large.lineHeight)
+    || (variant === 'caption-large' && caption.large.lineHeight)
   )};
   letter-spacing: ${({ variant, theme: { font: { text: { body } } } }) => (
     (variant === 'body-large' && body.large.letterSpacing)

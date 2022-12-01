@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import phrases from '../../configurations/phrases';
+import phrases from '../../configurations/dictionary';
 import { NavigationLinks } from '../../configurations/settings';
 import Logo from '../Logo';
 import Navigation from '../Navigation';

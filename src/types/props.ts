@@ -1,4 +1,5 @@
 import { RouteObject } from 'react-router-dom';
+import { CardType } from './common';
 
 export interface BaseProps {
   className: string;
@@ -7,6 +8,15 @@ export interface BaseProps {
 export interface ButtonProps extends BaseProps {
   variant?: 'secondary' | 'primary';
   size?: 'small' | 'standard';
+}
+
+export interface CardProps extends BaseProps {
+  data: CardType;
+}
+
+export interface CardsProps {
+  sectionName: string;
+  data: CardType[];
 }
 
 export interface HeadlineProps extends BaseProps {

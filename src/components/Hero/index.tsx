@@ -1,10 +1,12 @@
-import phrases from '../../configurations/phrases';
+import phrases from '../../configurations/dictionary';
 import { HeroRoot } from './hero.style';
 import { highlightText } from '../../utils';
 import globalStyles from '../../theme/global_.module.css';
 import styles from './hero_.module.css';
 import { Button, Headline, Text } from '../styled.components';
 import { RangeType } from '../../types/common';
+import { heroCards } from '../../configurations/cards';
+import Cards from '../Cards';
 
 const { hero, button } = phrases;
 const headlineRange: RangeType = {
@@ -36,6 +38,10 @@ const Hero = (): JSX.Element => (
           { button.hireMe }
         </Button>
       </div>
+      <Cards
+        sectionName="hero"
+        data={heroCards}
+      />
     </div>
   </HeroRoot>
 );
