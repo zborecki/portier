@@ -36,9 +36,7 @@ export type CardThemeType = {
 
 export type CardType = {
   Icon: PhosphorIconType
-} & {
-  [text in 'title' | 'description']: string
-};
+} & InformationType;
 
 export type CommonThemeType = {
   background: string;
@@ -49,13 +47,21 @@ type ExtendedTypographyType = {
 };
 
 type HeadlinesType = {
-  [headline in 'h1']: TypographyType
+  [headline in 'h1' | 'h3']: TypographyType
 };
 
 export interface IFontTheme extends BoldParagraphsType {
   headline: HeadlinesType,
   text: StandardParagraphsType & BaseTypographyType
 }
+
+export type ImageTypographyType = {
+  [props in 'alt' | 'src']: string;
+};
+
+export type InformationType = {
+  [text in 'headline' | 'description']: string
+};
 
 export type LogoThemeType = {
   [variant in 'primary' | 'secondary']: BaseTypographyType

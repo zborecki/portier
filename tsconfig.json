@@ -28,6 +28,7 @@
   "include": [
     "src",
     "theme.d.ts",
-    "css.modules.d.ts"
+    "css.modules.d.ts",
+    "assets.d.ts"
   ]
 }

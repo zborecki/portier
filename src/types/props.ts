@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import { CardType } from './common';
+import { CardType, ImageTypographyType, InformationType } from './common';
 
 export interface BaseProps {
   className: string;
@@ -20,8 +20,16 @@ export interface CardsProps {
 }
 
 export interface HeadlineProps extends BaseProps {
-  variant: 'h1';
+  variant: 'h1' | 'h3';
   dot?: boolean;
+}
+
+export interface ImageProps extends BaseProps, ImageTypographyType {
+  width: number;
+}
+
+export interface InformationProps extends ImageTypographyType, BaseProps {
+  data: InformationType,
 }
 
 export interface LogoProps extends BaseProps {

@@ -6,7 +6,7 @@ const Cards = ({ sectionName, data }: CardsProps): JSX.Element => (
     {
       data.map((card) => (
         <Card
-          key={card.title}
+          key={card.headline}
           data={card}
           className={`${sectionName}__card`}
         />

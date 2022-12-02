@@ -33,7 +33,7 @@ declare module 'styled-components' {
         fontWeight: number;
         dot: BaseTypographyType
       }
-      highlightText: BaseTypographyType
+      highlightText: BaseTypographyType,
     }
     font: IFontTheme
   }
