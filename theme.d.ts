@@ -7,7 +7,8 @@ import {
   LogoThemeType,
   TypographyType,
   BaseTypographyType,
-  CardThemeType
+  CardThemeType,
+  TestimonialCardThemeType
 } from './src/types/common';
 
 declare module 'styled-components' {
@@ -34,6 +35,7 @@ declare module 'styled-components' {
         dot: BaseTypographyType
       }
       highlightText: BaseTypographyType,
+      testimonialCard: TestimonialCardThemeType
     }
     font: IFontTheme
   }

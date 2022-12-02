@@ -43,7 +43,7 @@ export interface NavigationProps extends BaseProps {
 }
 
 export interface ScrollProps extends BaseProps, ExtendedInformationType {
-
+  children: JSX.Element[];
 }
 
 export interface TextProps extends BaseProps {

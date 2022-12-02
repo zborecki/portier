@@ -99,6 +99,15 @@ export default {
       secondary: {
         color: secondary.royalOrange
       }
+    },
+    testimonialCard: {
+      fullName: neutrals.white,
+      occupation: neutrals.white,
+      message: neutrals.philippineGray,
+      background: {
+        default: neutrals.chineseBlack,
+        active: neutrals.darkGunmetal
+      }
     }
   },
   font: {

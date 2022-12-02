@@ -89,6 +89,16 @@ type StandardParagraphsType = {
   };
 };
 
+export type TestimonialCardThemeType = {
+  background: BaseStatesType
+} & {
+  [state in 'fullName' | 'occupation' | 'message']: string
+};
+
+export type TestimonialCardType = {
+  [key in 'fullName' | 'occupation' | 'message' | 'avatar']: string;
+};
+
 export type TypographyType = {
   fontSize: string;
   fontWeight?: number;
