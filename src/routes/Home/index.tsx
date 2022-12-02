@@ -2,8 +2,9 @@ import Hero from '../../components/Hero';
 import Information from '../../components/Information';
 import dictionary from '../../configurations/dictionary';
 import productsImage from '../../assets/products.png';
+import Scroll from '../../components/Scroll';
 
-const { informationI } = dictionary;
+const { informationI, testimonials } = dictionary;
 
 const Home = (): JSX.Element => (
   <>
@@ -13,6 +14,12 @@ const Home = (): JSX.Element => (
       alt="Products"
       src={productsImage}
       data={informationI}
+    />
+    <Scroll
+      headline={testimonials.headline}
+      description={testimonials.description}
+      shortDescription={testimonials.shortDescription}
+      className="testimonials"
     />
   </>
 );

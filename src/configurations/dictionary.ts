@@ -19,5 +19,10 @@ export default {
     portfolio: 'Portfolio',
     aboutMe: 'About me',
     blog: 'Blog'
+  },
+  testimonials: {
+    headline: 'What people say about me',
+    description: 'These steps are: Deep Observation (The Passive Mode), Skills Acquisition (The Practice Mode), and Experimentation (The Active Mode).',
+    shortDescription: 'Empathy plays an enormous role in learning and knowledge.'
   }
 };

@@ -1,5 +1,7 @@
 import { RouteObject } from 'react-router-dom';
-import { CardType, ImageTypographyType, InformationType } from './common';
+import {
+  CardType, ExtendedInformationType, ImageTypographyType, InformationType
+} from './common';
 
 export interface BaseProps {
   className: string;
@@ -38,6 +40,10 @@ export interface LogoProps extends BaseProps {
 
 export interface NavigationProps extends BaseProps {
   navigationItems: RouteObject[];
+}
+
+export interface ScrollProps extends BaseProps, ExtendedInformationType {
+
 }
 
 export interface TextProps extends BaseProps {

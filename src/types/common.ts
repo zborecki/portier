@@ -46,6 +46,10 @@ type ExtendedTypographyType = {
   [property in 'lineHeight' | 'letterSpacing']?: string;
 };
 
+export type ExtendedInformationType = InformationType & {
+  shortDescription: string;
+};
+
 type HeadlinesType = {
   [headline in 'h1' | 'h3']: TypographyType
 };
