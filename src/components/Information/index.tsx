@@ -19,6 +19,7 @@ const Information = ({
         <Headline
           className="information__headline"
           variant="h3"
+          as="h2"
         >
           { headline }
         </Headline>

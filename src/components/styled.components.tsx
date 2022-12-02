@@ -38,9 +38,7 @@ export const Button = styled(Link)<ButtonProps>`
   }
 `;
 
-export const Headline = styled.h1.attrs(({ variant }: HeadlineProps) => ({
-  as: variant
-}))<HeadlineProps>`
+export const Headline = styled.h1<HeadlineProps>`
   // Common properties
   margin: ${typographyMargin};
   color: ${({ theme: { components: { headline } } }) => headline.color};

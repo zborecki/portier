@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InformationRoot = styled.section`
-  background: ${(props) => props.theme.common.section.background};
+  background: ${({ theme: { common: { section } } }) => section.background};
 
   .information {
     &__image {
