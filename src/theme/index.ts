@@ -120,6 +120,11 @@ export default {
         fontSize: '72px',
         lineHeight: '86px',
         letterSpacing: '-0.02em'
+      },
+      h3: {
+        fontSize: '48px',
+        lineHeight: '56px',
+        letterSpacing: '-0.02em'
       }
     },
     text: {

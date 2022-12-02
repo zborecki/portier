@@ -4,7 +4,7 @@ import { CardRoot } from './card.style';
 import styles from './card_.module.css';
 
 const Card = ({
-  className, data: { Icon, description, title }
+  className, data: { Icon, description, headline }
 }: CardProps): JSX.Element => (
   <CardRoot className={className}>
     <div className={`${styles.shape} card__shape`}>
@@ -19,7 +19,7 @@ const Card = ({
       bold
       variant="body-large"
     >
-      { title }
+      { headline }
     </Text>
     <Text
       as="p"

@@ -47,14 +47,17 @@ export const Headline = styled.h1.attrs(({ variant }: HeadlineProps) => ({
   font-weight: ${({ theme: { components: { headline } } }) => headline.fontWeight};
 
   // Variants
-  font-size: ${({ variant, theme: { font: { headline: { h1 } } } }) => (
+  font-size: ${({ variant, theme: { font: { headline: { h1, h3 } } } }) => (
     (variant === 'h1' && h1.fontSize)
+    || (variant === 'h3' && h3.fontSize)
   )};
-  line-height: ${({ variant, theme: { font: { headline: { h1 } } } }) => (
+  line-height: ${({ variant, theme: { font: { headline: { h1, h3 } } } }) => (
     (variant === 'h1' && h1.lineHeight)
+    || (variant === 'h3' && h3.lineHeight)
   )};
-  letter-spacing: ${({ variant, theme: { font: { headline: { h1 } } } }) => (
+  letter-spacing: ${({ variant, theme: { font: { headline: { h1, h3 } } } }) => (
     (variant === 'h1' && h1.letterSpacing)
+    || (variant === 'h3' && h3.letterSpacing)
   )};
 
   &::after {
