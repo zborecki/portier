@@ -46,6 +46,10 @@ type ExtendedTypographyType = {
   [property in 'lineHeight' | 'letterSpacing']?: string;
 };
 
+export type ExtendedInformationType = InformationType & {
+  shortDescription: string;
+};
+
 type HeadlinesType = {
   [headline in 'h1' | 'h3']: TypographyType
 };
@@ -83,6 +87,16 @@ type StandardParagraphsType = {
   type: {
     [type in 'standard' | 'bolder']: number
   };
+};
+
+export type TestimonialCardThemeType = {
+  background: BaseStatesType
+} & {
+  [state in 'fullName' | 'occupation' | 'message']: string
+};
+
+export type TestimonialCardType = {
+  [key in 'fullName' | 'occupation' | 'message' | 'avatar']: string;
 };
 
 export type TypographyType = {
