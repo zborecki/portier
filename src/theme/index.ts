@@ -134,6 +134,11 @@ export default {
         fontSize: '48px',
         lineHeight: '56px',
         letterSpacing: '-0.02em'
+      },
+      h4: {
+        fontSize: '40px',
+        lineHeight: '48px',
+        letterSpacing: '-0.01em'
       }
     },
     text: {

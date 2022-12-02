@@ -3,10 +3,11 @@ import Information from '../../components/Information';
 import dictionary from '../../configurations/dictionary';
 import productsImage from '../../assets/products.png';
 import Scroll from '../../components/Scroll';
-import { testimonialCards } from '../../configurations/cards';
+import { testimonialCards, interestingFacts } from '../../configurations/data';
 import TestimonialCard from '../../components/TestimonialCard';
+import Facts from '../../components/Facts';
 
-const { informationI, testimonials } = dictionary;
+const { informationI, testimonials, facts } = dictionary;
 
 const Home = (): JSX.Element => (
   <>
@@ -38,6 +39,10 @@ const Home = (): JSX.Element => (
         ))
       }
     </Scroll>
+    <Facts
+      headline={facts.headline}
+      data={interestingFacts}
+    />
   </>
 );
 

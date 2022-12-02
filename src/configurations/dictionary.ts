@@ -6,6 +6,9 @@ export default {
   common: {
     companyName: 'Portier'
   },
+  facts: {
+    headline: 'I’ve worked with more than 200 companies & startups around the world'
+  },
   hero: {
     headline: 'Digital Product Designer',
     description: 'I am Portier, experienced Digital Product Designer based on Florida.\nI want to help you build your amazing product.'

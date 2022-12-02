@@ -5,7 +5,7 @@ import globalStyles from '../../theme/global_.module.css';
 import styles from './hero_.module.css';
 import { Button, Headline, Text } from '../styled.components';
 import { RangeType } from '../../types/common';
-import { heroCards } from '../../configurations/cards';
+import { heroCards } from '../../configurations/data';
 import Cards from '../Cards';
 
 const { hero, button } = phrases;

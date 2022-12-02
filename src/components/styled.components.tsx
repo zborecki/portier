@@ -45,17 +45,20 @@ export const Headline = styled.h1<HeadlineProps>`
   font-weight: ${({ theme: { components: { headline } } }) => headline.fontWeight};
 
   // Variants
-  font-size: ${({ variant, theme: { font: { headline: { h1, h3 } } } }) => (
+  font-size: ${({ variant, theme: { font: { headline: { h1, h3, h4 } } } }) => (
     (variant === 'h1' && h1.fontSize)
     || (variant === 'h3' && h3.fontSize)
+    || (variant === 'h4' && h4.fontSize)
   )};
-  line-height: ${({ variant, theme: { font: { headline: { h1, h3 } } } }) => (
+  line-height: ${({ variant, theme: { font: { headline: { h1, h3, h4 } } } }) => (
     (variant === 'h1' && h1.lineHeight)
     || (variant === 'h3' && h3.lineHeight)
+    || (variant === 'h4' && h4.lineHeight)
   )};
-  letter-spacing: ${({ variant, theme: { font: { headline: { h1, h3 } } } }) => (
+  letter-spacing: ${({ variant, theme: { font: { headline: { h1, h3, h4 } } } }) => (
     (variant === 'h1' && h1.letterSpacing)
     || (variant === 'h3' && h3.letterSpacing)
+    || (variant === 'h4' && h4.letterSpacing)
   )};
 
   &::after {
