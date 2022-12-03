@@ -14,6 +14,13 @@ export default {
   facts: {
     headline: 'I’ve worked with more than 200 companies & startups around the world'
   },
+  footer: {
+    contact: 'Contact',
+    handbook: 'Handbook',
+    designSystem: 'Design system',
+    timeline: 'Timeline',
+    copyrights: 'Copyright 2021 © Portier. All right reserved'
+  },
   hero: {
     headline: 'Digital Product Designer',
     description: 'I am Portier, experienced Digital Product Designer based on Florida.\nI want to help you build your amazing product.'

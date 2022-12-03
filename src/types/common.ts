@@ -54,6 +54,12 @@ type HeadlinesType = {
   [headline in 'h1' | 'h3' | 'h4']: TypographyType
 };
 
+export interface Socialmedia {
+  Icon: PhosphorIconType;
+  link: string;
+  alt: string;
+}
+
 export interface IFontTheme extends BoldParagraphsType {
   headline: HeadlinesType,
   text: StandardParagraphsType & BaseTypographyType

@@ -24,6 +24,15 @@ declare module 'styled-components' {
         }
       },
       card: CardThemeType,
+      footer: CommonThemeType & {
+        navigation: BaseTypographyType,
+        socialmedia: {
+          icon: BaseStatesType,
+          background: BaseStatesType & {
+            borderRadius: string;
+          }
+        }
+      },
       logo: LogoThemeType & {
         font: TypographyType
       },
