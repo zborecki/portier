@@ -1,13 +1,25 @@
 export default {
   button: {
     getTemplate: 'Get template',
-    hireMe: 'Hire me'
+    hireMe: 'Hire me',
+    getInTouch: 'Get in touch'
   },
   common: {
     companyName: 'Portier'
   },
+  cta: {
+    headline: 'How about we make something awesome together?',
+    description: 'If we keep practicing, we gain fluency; basic skills are mastered, allowing us to take on newer and more exciting challenges.'
+  },
   facts: {
     headline: 'I’ve worked with more than 200 companies & startups around the world'
+  },
+  footer: {
+    contact: 'Contact',
+    handbook: 'Handbook',
+    designSystem: 'Design system',
+    timeline: 'Timeline',
+    copyrights: 'Copyright 2021 © Portier. All right reserved'
   },
   hero: {
     headline: 'Digital Product Designer',

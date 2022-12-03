@@ -86,11 +86,13 @@ export const Text = styled.p<TextProps>`
   // Variants
   font-size: ${({ variant, theme: { font: { text: { body, caption } } } }) => (
     (variant === 'body-large' && body.large.fontSize)
+    || (variant === 'body-small' && body.small.fontSize)
     || (variant === 'caption-large' && caption.large.fontSize)
     || (variant === 'caption-small' && caption.small.fontSize)
   )};
   line-height: ${({ variant, theme: { font: { text: { body, caption } } } }) => (
     (variant === 'body-large' && body.large.lineHeight)
+    || (variant === 'body-small' && body.small.lineHeight)
     || (variant === 'caption-large' && caption.large.lineHeight)
     || (variant === 'caption-small' && caption.small.lineHeight)
   )};

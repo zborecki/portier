@@ -71,6 +71,22 @@ export default {
         color: neutrals.white
       }
     },
+    footer: {
+      background: neutrals.darkGunmetal,
+      navigation: {
+        color: neutrals.white
+      },
+      socialmedia: {
+        background: {
+          default: neutrals.darkGunmetal,
+          active: secondary.royalOrange,
+          borderRadius: '50%'
+        },
+        icon: {
+          default: neutrals.white
+        }
+      }
+    },
     header: {
       background: neutrals.chineseBlack,
       navigation: {

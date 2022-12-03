@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 const Layout = (): JSX.Element => (
@@ -9,9 +10,7 @@ const Layout = (): JSX.Element => (
     >
       <Outlet />
     </main>
-    <footer className="footer">
-      Footer
-    </footer>
+    <Footer />
   </>
 );
 

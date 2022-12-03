@@ -9,7 +9,7 @@ export default createGlobalStyle`
     font-family: 'Sora', sans-serif;
   }
 
-  section {
+  section, footer {
     padding: 120px 0px;
   }
 `;
