@@ -10,6 +10,11 @@ export const TestimonialCardRoot = styled.div`
   background: ${({ theme: { components: { testimonialCard: { background } } } }) => background.default};
   transition: background .25s ease-out;
 
+  
+  @media screen and (max-width: 1200px) {
+    max-width: 100%;
+  }
+
   &:hover {
     background: ${({ theme: { components: { testimonialCard: { background } } } }) => background.active};
   }

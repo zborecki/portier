@@ -12,6 +12,11 @@ export const FooterRoot = styled.footer`
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+        gap: 16px;
+      }
     }
 
     &__copyrights {

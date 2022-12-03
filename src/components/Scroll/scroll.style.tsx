@@ -13,7 +13,12 @@ export const ScrollRoot = styled.section`
 
     &__wrapper {
       display: flex;
-      gap: 176px;
+      justify-content: space-between;
+      gap: 32px;
+
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+      }
     }
   }
 `;

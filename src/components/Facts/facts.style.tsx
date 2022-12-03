@@ -8,11 +8,20 @@ export const FactsRoot = styled.section`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 32px;
+
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+      }
     }
 
     &__statistics {
       display: flex;
       gap: 32px;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
     }
 
     &__card {

@@ -32,7 +32,7 @@ const Header = (): JSX.Element => (
   <HeaderRoot className="header">
     <div className={`${globalStyles.wrapper} ${styles.wrapper}`}>
       <Logo className="header__logo" />
-      <div className={styles.interaction}>
+      <div className={`${styles.interaction} header__interaction`}>
         <Navigation
           className="header__navigation"
           navigationItems={navigationItems}

@@ -6,6 +6,10 @@ export const HeaderRoot = styled.header`
 
   .header {
     &__navigation {
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+      
       .navigation {
         &__link {
           transition: color 0.2s ease-out;

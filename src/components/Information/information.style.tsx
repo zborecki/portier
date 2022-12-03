@@ -20,6 +20,11 @@ export const InformationRoot = styled.section<{
 
     &__wrapper {
       flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+
+      @media screen and (max-width: 960px) {
+        flex-direction: column;
+        flex-direction: ${({ reverse }) => (reverse ? 'column-reverse' : 'column')};
+      }
     }
   }
 `;
