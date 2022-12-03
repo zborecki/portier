@@ -37,6 +37,7 @@ export interface ImageProps extends BaseProps, ImageTypographyType {
 
 export interface InformationProps extends ImageTypographyType, BaseProps {
   data: InformationType,
+  reverse?: boolean;
 }
 
 export interface LogoProps extends BaseProps {

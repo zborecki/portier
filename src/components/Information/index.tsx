@@ -11,10 +11,14 @@ const Information = ({
   data: {
     headline, description
   },
-  src
+  src,
+  reverse
 }: InformationProps): JSX.Element => (
-  <InformationRoot className={className}>
-    <div className={`${globalStyles.wrapper} ${styles.wrapper}`}>
+  <InformationRoot
+    className={className}
+    reverse={reverse}
+  >
+    <div className={`${globalStyles.wrapper} ${styles.wrapper} information__wrapper`}>
       <div className="information__interaction">
         <Headline
           className="information__headline"

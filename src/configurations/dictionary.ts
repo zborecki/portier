@@ -17,6 +17,10 @@ export default {
     headline: 'I build products for companies & startups.',
     description: 'Everything in nature has a structure, a way that the parts relate to one another, which is generally fluid and not so easy to conceptualize.'
   },
+  informationII: {
+    headline: 'My main goal is too keep my customers satisfied.',
+    description: 'Even with skills that are primarily mental, such as computer programming or speaking a foreign language.'
+  },
   navigation: {
     home: 'Home',
     portfolio: 'Portfolio',
