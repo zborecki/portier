@@ -8,6 +8,7 @@ import Facts from '../../components/Facts';
 
 import productsImage from '../../assets/products.png';
 import notebookImage from '../../assets/notebook.png';
+import CTA from '../../components/CTA';
 
 const {
   informationI, informationII, testimonials, facts
@@ -54,6 +55,7 @@ const Home = (): JSX.Element => (
       src={notebookImage}
       data={informationII}
     />
+    <CTA />
   </>
 );
 
