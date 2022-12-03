@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const InformationRoot = styled.section`
+export const InformationRoot = styled.section<{
+  reverse?: boolean;
+}>`
   background: ${({ theme: { common: { section } } }) => section.background};
 
   .information {
@@ -14,6 +16,10 @@ export const InformationRoot = styled.section`
 
     &__interaction {
       max-width: 530px;
+    }
+
+    &__wrapper {
+      flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     }
   }
 `;

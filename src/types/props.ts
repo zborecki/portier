@@ -21,8 +21,13 @@ export interface CardsProps {
   data: CardType[];
 }
 
+export interface FactsProps {
+  headline: string;
+  data: InformationType[];
+}
+
 export interface HeadlineProps extends BaseProps {
-  variant: 'h1' | 'h3';
+  variant: 'h1' | 'h3' | 'h4';
   dot?: boolean;
 }
 
@@ -32,6 +37,7 @@ export interface ImageProps extends BaseProps, ImageTypographyType {
 
 export interface InformationProps extends ImageTypographyType, BaseProps {
   data: InformationType,
+  reverse?: boolean;
 }
 
 export interface LogoProps extends BaseProps {

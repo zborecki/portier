@@ -51,7 +51,7 @@ export type ExtendedInformationType = InformationType & {
 };
 
 type HeadlinesType = {
-  [headline in 'h1' | 'h3']: TypographyType
+  [headline in 'h1' | 'h3' | 'h4']: TypographyType
 };
 
 export interface IFontTheme extends BoldParagraphsType {

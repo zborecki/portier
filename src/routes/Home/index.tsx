@@ -1,12 +1,17 @@
 import Hero from '../../components/Hero';
 import Information from '../../components/Information';
 import dictionary from '../../configurations/dictionary';
-import productsImage from '../../assets/products.png';
 import Scroll from '../../components/Scroll';
-import { testimonialCards } from '../../configurations/cards';
+import { testimonialCards, interestingFacts } from '../../configurations/data';
 import TestimonialCard from '../../components/TestimonialCard';
+import Facts from '../../components/Facts';
 
-const { informationI, testimonials } = dictionary;
+import productsImage from '../../assets/products.png';
+import notebookImage from '../../assets/notebook.png';
+
+const {
+  informationI, informationII, testimonials, facts
+} = dictionary;
 
 const Home = (): JSX.Element => (
   <>
@@ -38,6 +43,17 @@ const Home = (): JSX.Element => (
         ))
       }
     </Scroll>
+    <Facts
+      headline={facts.headline}
+      data={interestingFacts}
+    />
+    <Information
+      reverse
+      className="customers"
+      alt="Products"
+      src={notebookImage}
+      data={informationII}
+    />
   </>
 );
 

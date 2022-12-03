@@ -1,7 +1,18 @@
 import { BoundingBox, Layout, PencilLine } from 'phosphor-react';
-import { CardType, TestimonialCardType } from '../types/common';
+import { CardType, InformationType, TestimonialCardType } from '../types/common';
 
 import avatarImage from '../assets/avatar.png';
+
+export const interestingFacts: InformationType[] = [
+  {
+    headline: '50%',
+    description: 'One repays a teacher badly if one remains only a pupil.'
+  },
+  {
+    headline: '90%',
+    description: 'One repays a teacher badly if one remains only a pupil.'
+  }
+];
 
 export const heroCards: CardType[] = [
   {
