@@ -24,6 +24,10 @@ declare module 'styled-components' {
         }
       },
       card: CardThemeType,
+      error: {
+        h1: BaseTypographyType,
+        h2: BaseTypographyType
+      }
       footer: CommonThemeType & {
         navigation: BaseTypographyType,
         socialmedia: {

@@ -71,6 +71,11 @@ export default {
         color: neutrals.white
       }
     },
+    error: {
+      h1: {
+        color: primary.aquamarine
+      }
+    },
     footer: {
       background: neutrals.darkGunmetal,
       navigation: {
