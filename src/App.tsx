@@ -5,6 +5,7 @@ import theme from './theme';
 import Layout from './routes/Layout';
 import { NavigationLinks } from './configurations/settings';
 import Home from './routes/Home';
+import Error404 from './components/Error404';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
       },
       {
         path: NavigationLinks.Error404,
-        element: <div>404</div>
+        element: <Error404 />
       }
     ]
   }

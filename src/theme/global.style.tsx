@@ -7,6 +7,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Sora', sans-serif;
+    background: ${({ theme: { common: { section } } }) => section.background};
   }
 
   section, footer {

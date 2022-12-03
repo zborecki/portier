@@ -2,7 +2,8 @@ export default {
   button: {
     getTemplate: 'Get template',
     hireMe: 'Hire me',
-    getInTouch: 'Get in touch'
+    getInTouch: 'Get in touch',
+    goBackHome: 'Go back home'
   },
   common: {
     companyName: 'Portier'
@@ -10,6 +11,11 @@ export default {
   cta: {
     headline: 'How about we make something awesome together?',
     description: 'If we keep practicing, we gain fluency; basic skills are mastered, allowing us to take on newer and more exciting challenges.'
+  },
+  error: {
+    h1: '404',
+    h2: 'Page not found.',
+    description: 'The page you are looking for does not exist or has been moved. Please go back to the homepage.'
   },
   facts: {
     headline: 'I’ve worked with more than 200 companies & startups around the world'
