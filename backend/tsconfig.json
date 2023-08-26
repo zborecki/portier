@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "allowJs": false,
+    "strict": false,
+    "esModuleInterop": true,
+    "moduleResolution":"nodenext",
+    "skipLibCheck": true,
+    "jsx": "react",
+    "paths": {
+      "payload/generated-types": ["./src/payload-types.ts"],
+    }
+  },
+  "include": [
+    ".eslintrc.js",
+    "**/*.ts",
+    "src",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "swc": true,
+  }
+}

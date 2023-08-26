@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "#components/*": ["src/components/*"],
+      "#layouts/*": ["src/layouts/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".eslintrc.cjs",
+    "**/*.astro",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.ts", "**/*.tsx", 
+  ],
+}
