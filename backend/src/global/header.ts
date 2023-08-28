@@ -16,7 +16,7 @@ const header: GlobalConfig = {
     {
       fields: [
         {
-          maxDepth: 1,
+          maxDepth: 2,
           name: 'page',
           type: 'relationship',
           relationTo: 'pages',

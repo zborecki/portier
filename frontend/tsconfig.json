@@ -3,7 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "#components/*": ["src/components/*"],
-      "#layouts/*": ["src/layouts/*"]
+      "#layouts/*": ["src/layouts/*"],
+      "#libraries/*": ["src/libraries/*"],
+      "#services/*": ["src/services/*"],
+      "#types/*": ["src/types/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
