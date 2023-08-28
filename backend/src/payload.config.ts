@@ -6,6 +6,7 @@ import { buildConfig } from 'payload/config';
 import { media } from './collections/media';
 import { pages } from './collections/pages';
 import { users } from './collections/users';
+import header from './global/header';
 
 const FILE_SIZE_BYTES = 2000000; // 2MB
 
@@ -15,6 +16,9 @@ export default buildConfig({
     media, pages, users,
   ],
   cors: ['*'],
+  globals: [
+    header,
+  ],
   graphQL: { schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql') },
   plugins: [
     payloadCloud(),

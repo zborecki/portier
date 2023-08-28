@@ -39,7 +39,6 @@ export const pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      minRows: 1,
       blocks: [
         IntroductionBlock,
       ],
