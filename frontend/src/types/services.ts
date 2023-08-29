@@ -1,4 +1,9 @@
+export type ButtonService = {
+  [key in 'label' | 'url']: string;
+};
+
 export interface HeaderService {
+  button: ButtonService;
   logo: ImageService;
   navigationItems: PageService[];
 }

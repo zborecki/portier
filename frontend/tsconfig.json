@@ -6,7 +6,9 @@
       "#layouts/*": ["src/layouts/*"],
       "#libraries/*": ["src/libraries/*"],
       "#services/*": ["src/services/*"],
-      "#types/*": ["src/types/*"]
+      "#stores/*": ["src/stores/*"],
+      "#types/*": ["src/types/*"],
+      "#utils/*": ["src/utils/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"

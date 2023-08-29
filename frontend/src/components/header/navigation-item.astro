@@ -1,0 +1,28 @@
+---
+import type { LinkProps } from '#types/props';
+import { getCurrentRoute } from '#utils/functions';
+
+type Props = LinkProps;
+const { url } = Astro.props;
+
+const { pathname } = Astro.url;
+const currentRoute = getCurrentRoute(pathname);
+const currentRouteStyle = currentRoute === url ? 'text-neutral-0' : undefined;
+---
+
+<li>
+  <a
+    class={`header__navigation-link ${currentRouteStyle}`}
+    href={url === '/' ? url : `/${url}`}
+  >
+    <slot />
+  </a>
+</li>
+
+<style lang="scss">
+  .header {
+    &__navigation-link {
+      @apply hover:text-neutral-0 text-link transition-colors;
+    }
+  }
+</style>
