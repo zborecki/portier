@@ -1,0 +1,30 @@
+---
+import { Image } from '@astrojs/image/components';
+import { t } from 'i18next';
+
+import { headerStore } from '#stores/header-store';
+
+const { logo } = headerStore.get();
+---
+
+<div class="header__logo">
+  <Image
+    src={logo.url}
+    alt={logo.alt}
+    width={logo.width}
+    height={logo.height}
+  />
+  <p class="header__logotype">{ t('company_name') }</p>
+</div>
+
+<style lang="scss">
+  .header {
+    &__logo {
+      @apply flex gap-2 items-center;
+    }
+
+    &__logotype {
+      @apply text-logotype text-neutral-0;
+    }
+  }
+</style>

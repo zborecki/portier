@@ -1,0 +1,27 @@
+---
+import BaseLayout from '#layouts/base-layout.astro';
+import { api } from '#libraries/axios';
+import { ENDPOINT } from '#services/endpoints';
+import type { HeaderService } from '#types/services';
+
+export async function getStaticPaths() {
+  const { navigationItems } = (await api.get<HeaderService>(ENDPOINT.HEADER)).data;
+
+  return navigationItems.map(({ page: { pageTitle, slug } }) => ({
+    params: {
+      slug: slug === '/' ? undefined : slug,
+    },
+    props: {
+      pageTitle,
+    },
+  }));
+}
+
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<main>
+		{pageTitle}
+	</main>
+</BaseLayout>

@@ -1,23 +1,36 @@
 ---
-interface Props {
-  title: string
-}
+import i18next from 'i18next';
 
-const { title } = Astro.props;
+import Header from '#components/header/index.astro';
+import type { BaseLayoutProps } from '#types/props';
+
+type Props = BaseLayoutProps;
+const { pageTitle } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={i18next.language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{pageTitle}</title>
+		<!-- Font family: Sora  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<Header />
 		<slot />
-		<h1>Test</h1>
 	</body>
 </html>
+
+<style lang="scss">
+	body {
+		@apply bg-neutral-400 text-caption text-neutral-200;
+		font-family: 'Sora', sans-serif;
+	}
+</style>

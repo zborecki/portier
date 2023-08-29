@@ -1,0 +1,35 @@
+---
+import Button from '#components/button.astro';
+import Logo from '#components/header/logo.astro';
+import Navigation from '#components/header/navigation.astro';
+import { headerStore } from '#stores/header-store';
+
+const { button } = headerStore.get();
+---
+
+<div class="header__wrapper">
+  <Logo />
+  <div class="header__interactive">
+    <Navigation />
+    <Button
+    isExternal
+    size='small'
+    url={button.url}
+    variant='secondary'
+  >
+    { button.label }
+  </Button>
+  </div>
+</div>
+
+<style lang="scss">
+  .header {
+    &__interactive {
+      @apply flex gap-10 items-center;
+    }
+
+    &__wrapper {
+      @apply flex items-center justify-between wrapper;
+    }
+  }
+</style>

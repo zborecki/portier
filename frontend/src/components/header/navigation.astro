@@ -1,0 +1,28 @@
+---
+import NavigationItem from '#components/header/navigation-item.astro';
+import { headerStore } from '#stores/header-store';
+
+const { navigationItems } = headerStore.get();
+---
+
+<nav>
+  <ul class="header__navigation-list">
+    {
+      navigationItems.map(({
+        page: { pageTitle, slug },
+      }) => (
+        <NavigationItem url={slug}>
+          { pageTitle }
+        </NavigationItem>
+      ))
+    }
+  </ul>
+</nav>
+
+<style lang="scss">
+  .header {
+    &__navigation-list {
+      @apply flex gap-10;
+    }
+  }
+</style>
