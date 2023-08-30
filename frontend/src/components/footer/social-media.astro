@@ -1,0 +1,22 @@
+---
+import IconButton from '#components/icon-button.astro';
+import { footerStore } from '#stores/footer-store';
+
+const { socialMedia } = footerStore.get();
+---
+
+<ul class="footer__social-media">
+  {
+    socialMedia.map((props) => (
+      <li>
+        <IconButton {...props} />
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  .footer__social-media {
+    @apply flex gap-6;
+  }
+</style>

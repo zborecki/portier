@@ -1,0 +1,17 @@
+---
+import SocialMedia from '#components/footer/social-media.astro';
+import { footerStore } from '#stores/footer-store';
+
+const { copyright } = footerStore.get();
+---
+
+<div class="footer__wrapper">
+  <p>{ copyright }</p>
+  <SocialMedia />
+</div>
+
+<style lang="scss">
+  .footer__wrapper {
+    @apply flex items-center justify-between wrapper;
+  }
+</style>

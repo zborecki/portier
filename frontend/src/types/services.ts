@@ -2,6 +2,11 @@ export type ButtonService = {
   [key in 'label' | 'url']: string;
 };
 
+export interface FooterService {
+  copyright: string;
+  socialMedia: SocialMediaService[];
+}
+
 export interface HeaderService {
   button: ButtonService;
   logo: ImageService;
@@ -19,4 +24,8 @@ export interface PageService {
   page: {
     [page in 'pageTitle' | 'slug']: string;
   }
+}
+
+export interface SocialMediaService extends ButtonService {
+  icon: ImageService;
 }

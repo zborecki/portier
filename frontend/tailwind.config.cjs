@@ -58,6 +58,10 @@ module.exports = {
           fontWeight: 700,
           lineHeight: 'normal',
         }],
+        tooltip: ['12px', {
+          fontWeight: 600,
+          lineHeight: '12px',
+        }],
       },
     },
   },
