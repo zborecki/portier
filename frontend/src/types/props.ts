@@ -1,3 +1,5 @@
+import type { ImageService } from '#types/services';
+
 export interface BaseLayoutProps {
   pageTitle: string;
 }
@@ -6,6 +8,11 @@ export interface ButtonProps extends LinkProps {
   isExternal?: boolean;
   size?: 'medium' | 'small';
   variant?: 'primary' | 'secondary';
+}
+
+export interface IconButtonProps extends LinkProps {
+  icon: ImageService;
+  label: string;
 }
 
 export interface LinkProps {

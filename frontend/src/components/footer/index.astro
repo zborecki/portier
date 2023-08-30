@@ -3,34 +3,34 @@ import { t } from 'i18next';
 import { onMount, task } from 'nanostores';
 
 import ErrorMessage from '#components/error-message.astro';
-import Wrapper from '#components/header/wrapper.astro';
+import Wrapper from '#components/footer/wrapper.astro';
 import { ENDPOINT } from '#services/endpoints';
 import { fetch } from '#services/index';
 import { STATUS_CODE } from '#services/status-codes';
-import { headerStore } from '#stores/header-store';
-import type { HeaderService } from '#types/services';
+import { footerStore } from '#stores/footer-store';
+import type { FooterService } from '#types/services';
 
-const { data, status } = await fetch<HeaderService>(ENDPOINT.HEADER);
+const { data, status } = await fetch<FooterService>(ENDPOINT.FOOTER);
 
 if (status === STATUS_CODE.OK) {
-  onMount(headerStore, () => {
+  onMount(footerStore, () => {
     task(async () => {
-      headerStore.set(data);
+      footerStore.set(data);
     });
   });
 }
 ---
 
-<header class="header">
+<footer class="footer">
   {
     status !== STATUS_CODE.OK
       ? <ErrorMessage>{ t('error.not_defined') }</ErrorMessage>
       : <Wrapper />
   }
-</header>
+</footer>
 
 <style lang="scss">
-  .header {
-    @apply bg-neutral-400 py-5;
+  .footer {
+    @apply bg-neutral-350 py-8;
   }
 </style>
