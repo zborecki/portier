@@ -1,27 +1,36 @@
 ---
 import BaseLayout from '#layouts/base-layout.astro';
 import { api } from '#libraries/axios';
+import { Block } from '#services/blocks';
 import { ENDPOINT } from '#services/endpoints';
-import type { HeaderService } from '#types/services';
+import type { DocumentService, HeaderService, PagesService } from '#types/services';
 
 export async function getStaticPaths() {
   const { navigationItems } = (await api.get<HeaderService>(ENDPOINT.HEADER)).data;
+  const { docs } = (await api.get<PagesService>(ENDPOINT.PAGES)).data;
 
-  return navigationItems.map(({ page: { pageTitle, slug } }) => ({
-    params: {
-      slug: slug === '/' ? undefined : slug,
-    },
-    props: {
-      pageTitle,
-    },
-  }));
+  return navigationItems.map(({ page: { pageTitle, slug } }) => {
+    const { layout }: DocumentService = docs.filter(
+      (doc) => doc.pageTitle === pageTitle,
+    )[0];
+
+    return ({
+      params: { slug: slug === '/' ? undefined : slug },
+      props: { layout, pageTitle },
+    });
+  });
 }
 
-const { pageTitle } = Astro.props;
+type Props = DocumentService;
+const { layout, pageTitle } = Astro.props;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<main>
-		{pageTitle}
+    {
+      layout.map(({ blockType, ...props }) => (
+        <Block blockType={blockType} props={props} />
+      ))
+    }
 	</main>
 </BaseLayout>

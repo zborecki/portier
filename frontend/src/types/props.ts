@@ -4,6 +4,11 @@ export interface BaseLayoutProps {
   pageTitle: string;
 }
 
+export interface BlockProps {
+  blockType: string;
+  props: any;
+}
+
 export interface ButtonProps extends LinkProps {
   isExternal?: boolean;
   size?: 'medium' | 'small';
