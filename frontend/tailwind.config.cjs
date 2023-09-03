@@ -39,6 +39,10 @@ module.exports = {
         },
       },
       fontSize: {
+        'button--medium': ['16px', {
+          fontWeight: 700,
+          lineHeight: '24px',
+        }],
         'button--small': ['14px', {
           fontWeight: 700,
           lineHeight: '20px',
@@ -49,6 +53,11 @@ module.exports = {
         'caption--secondary': ['14px', {
           fontWeight: 600,
           lineHeight: '24px',
+        }],
+        h2: ['48px', {
+          fontWeight: 700,
+          letterSpacing: '-0.96px',
+          lineHeight: '56px',
         }],
         link: ['14px', {
           fontWeight: 700,
@@ -62,6 +71,17 @@ module.exports = {
           fontWeight: 600,
           lineHeight: '12px',
         }],
+      },
+      padding: {
+        25: '6.25rem',
+        29: '7.5rem',
+      },
+      screens: {
+        sm: { max: '576px' },
+        md: { max: '768px' },
+        lg: { max: '992px' },
+        xl: { max: '1200px' },
+        xxl: { max: '1400px' },
       },
     },
   },

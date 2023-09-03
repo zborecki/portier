@@ -1,3 +1,5 @@
+import type { Block } from './common';
+
 import type { ImageService } from '#types/services';
 
 export interface BaseLayoutProps {
@@ -5,7 +7,7 @@ export interface BaseLayoutProps {
 }
 
 export interface BlockProps {
-  blockType: string;
+  blockType: Block;
   props: any;
 }
 

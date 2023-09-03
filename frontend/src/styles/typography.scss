@@ -1,0 +1,8 @@
+.heading {
+  @apply text-neutral-0;
+
+  &-2 {
+    @extend .heading;
+    @apply text-h2;
+  }
+}

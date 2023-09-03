@@ -1,0 +1,11 @@
+.section {
+  @apply py-29;
+
+  @screen lg {
+    @apply py-25;
+  }
+
+  @screen sm {
+    @apply py-12;
+  }
+}

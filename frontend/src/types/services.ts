@@ -8,9 +8,11 @@ export type ButtonService = {
   [key in 'label' | 'url']: string;
 };
 
-export interface CTAService extends BlockService, DetailsService {
-  button: ButtonService;
-}
+export type CTAService = BlockService & DetailsService & InteractiveDetailsService;
+
+export type DetailsService = {
+  [key in 'description' | 'title']: string;
+};
 
 export interface DocumentService extends Page {
   layout: CTAService[];
@@ -34,9 +36,10 @@ export interface ImageService {
   width: number;
 }
 
-export type DetailsService = {
-  [key in 'description' | 'title']: string;
-};
+export interface InteractiveDetailsService {
+  button: ButtonService;
+  description: string;
+}
 
 export interface PageService {
   page: Page;
