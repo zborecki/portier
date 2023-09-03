@@ -1,0 +1,42 @@
+@import './common.scss';
+@import './typography.scss';
+
+.cta {
+  @extend .section;
+
+  &__description {
+    @apply mb-6;
+
+    @screen lg {
+      @apply whitespace-normal;
+    }
+  }
+
+  &__interactive {
+    @apply self-center;
+
+    @screen md {
+      @apply self-auto;
+    }
+  }
+
+  &__title {
+    @apply heading-2;
+
+    @screen sm {
+      @apply whitespace-normal;
+    }
+  }
+
+  &__wrapper {
+    @apply flex justify-between wrapper;
+
+    @screen xl {
+      @apply gap-8;
+    }
+
+    @screen md {
+      @apply flex-col-reverse gap-10;
+    }
+  }
+}

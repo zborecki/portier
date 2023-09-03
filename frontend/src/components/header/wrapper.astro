@@ -1,5 +1,5 @@
 ---
-import Button from '#components/button.astro';
+import { Button } from '#components/button';
 import Logo from '#components/header/logo.astro';
 import Navigation from '#components/header/navigation.astro';
 import { headerStore } from '#stores/header-store';
@@ -12,11 +12,11 @@ const { button } = headerStore.get();
   <div class="header__interactive">
     <Navigation />
     <Button
-    isExternal
-    size='small'
-    url={button.url}
-    variant='secondary'
-  >
+      isExternal
+      size='small'
+      url={button.url}
+      variant='secondary'
+    >
     { button.label }
   </Button>
   </div>

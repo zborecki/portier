@@ -4,6 +4,7 @@ import i18next from 'i18next';
 import Footer from '#components/footer/index.astro';
 import Header from '#components/header/index.astro';
 import type { BaseLayoutProps } from '#types/props';
+import '#styles/global.scss';
 
 type Props = BaseLayoutProps;
 const { pageTitle } = Astro.props;
@@ -29,10 +30,3 @@ const { pageTitle } = Astro.props;
 		<Footer />
 	</body>
 </html>
-
-<style lang="scss">
-	body {
-		@apply bg-neutral-400 text-caption text-neutral-200;
-		font-family: 'Sora', sans-serif;
-	}
-</style>

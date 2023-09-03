@@ -3,7 +3,7 @@ import { Block } from 'payload/types';
 import { button } from '../components/button';
 import { heroCard } from '../components/hero-card';
 
-export const IntroductionBlock: Block = {
+export const introductionBlock: Block = {
   fields: [
     {
       name: 'title',

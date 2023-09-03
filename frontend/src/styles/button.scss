@@ -1,0 +1,23 @@
+.button {
+  @apply hover:bg-primary-light inline-block p-[14px_24px] rounded-lg transition-colors;
+
+  &__label {
+    @apply capitalize text-neutral-0;
+  }
+
+  &--medium {
+    @apply text-button--medium;
+  }
+
+  &--primary {
+    @apply bg-primary-main;
+  }
+
+  &--secondary {
+    @apply bg-neutral-350;
+  }
+
+  &--small {
+    @apply text-button--small;
+  }
+}

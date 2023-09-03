@@ -1,0 +1,8 @@
+body {
+  @apply bg-neutral-400 text-caption text-neutral-200;
+  font-family: 'Sora', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @apply whitespace-pre-line;
+}

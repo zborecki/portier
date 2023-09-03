@@ -1,7 +1,14 @@
+import type { Block } from './common';
+
 import type { ImageService } from '#types/services';
 
 export interface BaseLayoutProps {
   pageTitle: string;
+}
+
+export interface BlockProps {
+  blockType: Block;
+  props: any;
 }
 
 export interface ButtonProps extends LinkProps {
