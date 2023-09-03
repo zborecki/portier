@@ -4,5 +4,9 @@
   &-2 {
     @extend .heading;
     @apply text-h2;
+
+    @screen sm {
+      @apply text-h4;
+    }
   }
 }

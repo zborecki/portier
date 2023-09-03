@@ -38,5 +38,9 @@
     @screen md {
       @apply flex-col-reverse gap-10;
     }
+
+    @screen sm {
+      @apply gap-8;
+    }
   }
 }

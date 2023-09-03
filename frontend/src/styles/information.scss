@@ -1,0 +1,46 @@
+@import './common.scss';
+@import './typography.scss';
+
+.information {
+  @extend .section;
+
+  &__details {
+    @apply self-center;
+    
+    &--reverse {
+      @apply justify-self-end order-2;
+
+      @screen md {
+        @apply justify-self-auto;
+      }
+    }
+  }
+
+  &__illustration {
+    @apply justify-self-end max-w-[600px] self-center;
+
+    @screen md {
+      @apply justify-self-auto max-w-full;
+    }
+
+    &--reverse {
+      @apply justify-self-auto;
+    }
+  }
+
+  &__title {
+    @apply heading-2 mb-4;
+  }
+
+  &__wrapper {
+    @apply grid grid-cols-2 wrapper;
+
+    @screen xxl {
+      @apply gap-8;
+    }
+
+    @screen md {
+      @apply gap-12 grid-cols-1;
+    }
+  }
+}
