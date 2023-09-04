@@ -1,6 +1,7 @@
 import type { CollectionConfig, Field } from 'payload/types';
 
 import { ctaBlock } from '../blocks/cta-block';
+import { factsBlock } from '../blocks/facts-block';
 import { informationBlock } from '../blocks/information-block';
 import { introductionBlock } from '../blocks/introduction-block';
 
@@ -38,7 +39,7 @@ export const pages: CollectionConfig = {
       name: 'layout',
       type: 'blocks',
       blocks: [
-        ctaBlock, informationBlock, introductionBlock,
+        ctaBlock, factsBlock, informationBlock, introductionBlock,
       ],
     },
   ],

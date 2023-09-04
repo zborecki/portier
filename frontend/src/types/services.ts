@@ -1,4 +1,4 @@
-import type { Block, Page } from '#types/common';
+import type { BaseImage, Block, Page } from '#types/common';
 
 export interface BlockService {
   blockType: Block;
@@ -18,6 +18,11 @@ export interface DocumentService extends Page {
   layout: CTAService[];
 }
 
+export interface FactsService extends BlockService {
+  statsCards: StatsCard[];
+  title: string;
+}
+
 export interface FooterService {
   copyright: string;
   socialMedia: SocialMediaService[];
@@ -29,10 +34,8 @@ export interface HeaderService {
   navigationItems: PageService[];
 }
 
-export interface ImageService {
-  alt: string;
+export interface ImageService extends BaseImage {
   height: number;
-  url: string;
   width: number;
 }
 
@@ -56,4 +59,9 @@ export interface PagesService {
 
 export interface SocialMediaService extends ButtonService {
   icon: ImageService;
+}
+
+export interface StatsCard {
+  description: string;
+  value: number;
 }

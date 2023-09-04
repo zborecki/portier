@@ -59,6 +59,11 @@ module.exports = {
           letterSpacing: '-0.96px',
           lineHeight: '56px',
         }],
+        h3: ['40px', {
+          fontWeight: 700,
+          letterSpacing: '-0.4px',
+          lineHeight: '48px',
+        }],
         h4: ['32px', {
           fontWeight: 700,
           letterSpacing: '-0.32px',

@@ -1,6 +1,5 @@
-import type { Block } from './common';
-
-import type { ImageService } from '#types/services';
+import type { BaseImage, Block, Reverse } from '#types/common';
+import type { DetailsService, ImageService } from '#types/services';
 
 export interface BaseLayoutProps {
   pageTitle: string;
@@ -17,10 +16,14 @@ export interface ButtonProps extends LinkProps {
   variant?: 'primary' | 'secondary';
 }
 
+export type DetailsProps = DetailsService & Reverse;
+
 export interface IconButtonProps extends LinkProps {
   icon: ImageService;
   label: string;
 }
+
+export type ImageProps = BaseImage & Reverse;
 
 export interface LinkProps {
   url: string;
