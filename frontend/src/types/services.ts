@@ -1,4 +1,4 @@
-import type { Block, Page } from '#types/common';
+import type { BaseImage, Block, Page } from '#types/common';
 
 export interface BlockService {
   blockType: Block;
@@ -29,10 +29,8 @@ export interface HeaderService {
   navigationItems: PageService[];
 }
 
-export interface ImageService {
-  alt: string;
+export interface ImageService extends BaseImage {
   height: number;
-  url: string;
   width: number;
 }
 
