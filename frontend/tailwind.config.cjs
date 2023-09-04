@@ -59,6 +59,11 @@ module.exports = {
           letterSpacing: '-0.96px',
           lineHeight: '56px',
         }],
+        h4: ['32px', {
+          fontWeight: 700,
+          letterSpacing: '-0.32px',
+          lineHeight: '40px',
+        }],
         link: ['14px', {
           fontWeight: 700,
           lineHeight: '16px',
@@ -71,6 +76,10 @@ module.exports = {
           fontWeight: 600,
           lineHeight: '12px',
         }],
+      },
+      gridTemplateColumns: {
+        '1fr_600px': '1fr minmax(0, 600px)',
+        '600_1fr': 'minmax(0, 600px) 1fr',
       },
       padding: {
         25: '6.25rem',

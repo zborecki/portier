@@ -1,6 +1,7 @@
 import type { CollectionConfig, Field } from 'payload/types';
 
 import { ctaBlock } from '../blocks/cta-block';
+import { informationBlock } from '../blocks/information-block';
 import { introductionBlock } from '../blocks/introduction-block';
 
 const adminPanel: Field[] = [
@@ -37,7 +38,7 @@ export const pages: CollectionConfig = {
       name: 'layout',
       type: 'blocks',
       blocks: [
-        ctaBlock, introductionBlock,
+        ctaBlock, informationBlock, introductionBlock,
       ],
     },
   ],

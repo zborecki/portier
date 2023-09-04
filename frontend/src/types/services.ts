@@ -36,6 +36,11 @@ export interface ImageService {
   width: number;
 }
 
+export interface InformationService extends BlockService, DetailsService {
+  image: ImageService;
+  reverse?: boolean;
+}
+
 export interface InteractiveDetailsService {
   button: ButtonService;
   description: string;
