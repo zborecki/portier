@@ -1,12 +1,21 @@
+@mixin _base {
+  @extend .heading;
+
+  @screen sm {
+    @apply text-h4;
+  }
+}
+
 .heading {
   @apply text-neutral-0;
 
   &-2 {
-    @extend .heading;
     @apply text-h2;
+    @include _base;
+  }
 
-    @screen sm {
-      @apply text-h4;
-    }
+  &-3 {
+    @apply text-h3;
+    @include _base;
   }
 }

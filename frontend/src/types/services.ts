@@ -18,6 +18,11 @@ export interface DocumentService extends Page {
   layout: CTAService[];
 }
 
+export interface FactsService extends BlockService {
+  statsCards: StatsCard[];
+  title: string;
+}
+
 export interface FooterService {
   copyright: string;
   socialMedia: SocialMediaService[];
@@ -54,4 +59,9 @@ export interface PagesService {
 
 export interface SocialMediaService extends ButtonService {
   icon: ImageService;
+}
+
+export interface StatsCard {
+  description: string;
+  value: number;
 }

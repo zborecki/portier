@@ -1,0 +1,42 @@
+@import './common.scss';
+@import './typography.scss';
+
+.facts {
+  @extend .section;
+
+  &__list {
+    @apply flex gap-8 self-center;
+
+    @screen sm {
+      @apply flex-col gap-9;
+    }
+  }
+
+  &__title {
+    @apply heading-2;
+
+    @screen lg {
+      @apply self-center;
+    }
+  }
+
+  &__value {
+    @apply heading-3 mb-4;
+    
+    &::after {
+      content: '%';
+    }
+  }
+
+  &__wrapper {
+    @apply grid grid-cols-[1fr_auto] wrapper;
+
+    @screen xl {
+      @apply gap-8;
+    }
+
+    @screen lg {
+      @apply gap-9 grid-cols-1;
+    }
+  }
+}
