@@ -1,0 +1,17 @@
+.card {
+  &__description {
+    @apply whitespace-normal;
+  }
+
+  &__icon {
+    @apply bg-neutral-350 box-content max-w-[20px] mb-6 p-[14px] rounded-lg transition-colors;
+  }
+
+  &__image {
+    transition: filter cubic-bezier(0.4, 0, 0.2, 1) ease-out;
+  }
+
+  &__title {
+    @apply mb-4 text-body--bold text-neutral-0;
+  }
+}

@@ -18,4 +18,8 @@
     @apply text-h3;
     @include _base;
   }
+
+  &-hero {
+    @apply text-hero;
+  }
 }
