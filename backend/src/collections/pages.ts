@@ -4,6 +4,7 @@ import { ctaBlock } from '../blocks/cta-block';
 import { factsBlock } from '../blocks/facts-block';
 import { informationBlock } from '../blocks/information-block';
 import { introductionBlock } from '../blocks/introduction-block';
+import { testimonialsBlock } from '../blocks/testimonials-block';
 
 const adminPanel: Field[] = [
   {
@@ -39,7 +40,7 @@ export const pages: CollectionConfig = {
       name: 'layout',
       type: 'blocks',
       blocks: [
-        ctaBlock, factsBlock, informationBlock, introductionBlock,
+        ctaBlock, factsBlock, informationBlock, introductionBlock, testimonialsBlock,
       ],
     },
   ],
