@@ -80,6 +80,17 @@ export interface StatsCard {
   value: number;
 }
 
+export type TestimonialCardService = BlockService & {
+  avatar: ImageService;
+} & {
+  [key in 'fullName' | 'occupation' | 'quote']: string;
+};
+
+export interface TestimonialsService extends DetailsService {
+  note: string;
+  testimonials: TestimonialCardService[];
+}
+
 export interface TextareaService {
   children: {
     bold?: boolean;

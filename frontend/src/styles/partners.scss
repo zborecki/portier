@@ -1,0 +1,46 @@
+.partners {
+  @apply 
+    bg-neutral-400 
+    hover:bg-neutral-350 
+    gap-6 
+    grid 
+    grid-cols-[auto_1fr]
+    last-of-type:mb-0
+    mb-10
+    p-5
+    rounded-lg 
+    transition-colors
+  ;
+
+  &__avatar {
+    @apply w-[44px];
+  }
+
+  &__fullName {
+    @apply text-body--bold mb-1;
+  }
+
+  &__fullName, &__occupation {
+    @apply text-neutral-0;
+  }
+
+  &__image {
+    @apply rounded-full;
+  }
+
+  &__occupation {
+    @apply text-caption--secondary;
+  }
+
+  &__quote {
+    @apply mb-6;
+
+    &::after {
+      content: "”";
+    }
+
+    &::before {
+      content: "“";
+    }
+  }
+}
