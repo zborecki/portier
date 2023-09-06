@@ -1,0 +1,75 @@
+@import './common.scss';
+@import './typography.scss';
+
+.introduction {
+  @extend .section;
+
+  &__button {
+    @apply sm:w-full;
+  }
+
+  &__content {
+    @apply mb-[76px];
+
+    @screen sm {
+      @apply mb-14;
+    }
+  }
+
+  &__card {
+    @apply bg-neutral-400 hover:bg-neutral-350 p-5 rounded-lg transition-colors;
+
+    &:hover {
+      .card {
+        &__icon {
+          @apply bg-primary-light;
+        }
+
+        &__image {
+          filter: grayscale(1) invert(1);
+        }
+      }
+    }
+  }
+
+  &__cards {
+    @apply gap-9 grid grid-cols-3;
+
+    @screen lg {
+      @apply grid-cols-2;
+    }
+
+    @screen sm {
+      @apply grid-cols-1;
+    }
+  }
+
+  &__description {
+    @apply mb-8 text-body;
+
+    @screen sm {
+      @apply text-body--secondary;
+    }
+  }
+
+  &__title {
+    @extend .heading-hero;
+    @apply mb-4 text-neutral-0;
+
+    b {
+      @apply last-of-type:text-primary-main text-neutral-200;
+    }
+
+    @screen lg {
+      @apply text-h1;
+    }
+
+    @screen sm {
+      @apply text-h3;
+    }
+  }
+
+  &__wrapper {
+    @apply wrapper;
+  }
+}

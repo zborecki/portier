@@ -34,6 +34,10 @@ export interface HeaderService {
   navigationItems: PageService[];
 }
 
+export interface HeroCardService extends DetailsService {
+  image: ImageService;
+}
+
 export interface ImageService extends BaseImage {
   height: number;
   width: number;
@@ -47,6 +51,16 @@ export interface InformationService extends BlockService, DetailsService {
 export interface InteractiveDetailsService {
   button: ButtonService;
   description: string;
+}
+
+export interface IntroductionContentService {
+  button: ButtonService;
+  description: string;
+  title: TextareaService[];
+}
+
+export interface IntroductionService extends BlockService, IntroductionContentService {
+  heroCards: HeroCardService[];
 }
 
 export interface PageService {
@@ -64,4 +78,11 @@ export interface SocialMediaService extends ButtonService {
 export interface StatsCard {
   description: string;
   value: number;
+}
+
+export interface TextareaService {
+  children: {
+    bold?: boolean;
+    text: string;
+  }[];
 }

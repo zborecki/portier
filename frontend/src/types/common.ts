@@ -1,4 +1,4 @@
-export type Block = 'cta' | 'facts' | 'information';
+export type Block = 'cta' | 'facts' | 'information' | 'introduction';
 
 export type Page = {
   [key in 'pageTitle' | 'slug']: string;

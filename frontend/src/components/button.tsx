@@ -5,13 +5,14 @@ import '#styles/button.scss';
 
 const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = ({
   children,
+  className,
   isExternal = false,
   size = 'medium',
   url,
   variant = 'primary',
 }) => (
   <a
-    className={`button button--${size} button--${variant}`}
+    className={`button button--${size} button--${variant} ${className}`}
     href={url}
     target={isExternal ? '_blank' : '_self'}
     rel="noreferrer"

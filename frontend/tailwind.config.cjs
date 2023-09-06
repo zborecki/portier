@@ -31,14 +31,29 @@ module.exports = {
           400: '#12121C',
         },
         error: {
+          dark: '#733535',
           main: '#FA5454',
         },
         primary: {
-          light: '#FA59A6',
+          light: '#92A5EF',
           main: '#006ADA',
+        },
+        secondary: {
+          main: '#FA59A6',
         },
       },
       fontSize: {
+        body: ['24px', {
+          letterSpacing: '-0.24px',
+          lineHeight: '32px',
+        }],
+        'body--secondary': ['16px', {
+          lineHeight: '24px',
+        }],
+        'body--bold': ['24px', {
+          fontWeight: 600,
+          lineHeight: '32px',
+        }],
         'button--medium': ['16px', {
           fontWeight: 700,
           lineHeight: '24px',
@@ -54,6 +69,11 @@ module.exports = {
           fontWeight: 600,
           lineHeight: '24px',
         }],
+        h1: ['64px', {
+          fontWeight: 700,
+          letterSpacing: '-1.28px',
+          lineHeight: '64px',
+        }],
         h2: ['48px', {
           fontWeight: 700,
           letterSpacing: '-0.96px',
@@ -68,6 +88,11 @@ module.exports = {
           fontWeight: 700,
           letterSpacing: '-0.32px',
           lineHeight: '40px',
+        }],
+        hero: ['72px', {
+          fontWeight: 700,
+          letterSpacing: '-1.44px',
+          lineHeight: '86px',
         }],
         link: ['14px', {
           fontWeight: 700,

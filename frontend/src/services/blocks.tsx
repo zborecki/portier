@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
+import { Error } from '#components/error';
 import { CTA } from '#components/sections/cta';
 import { Facts } from '#components/sections/facts';
 import { Information } from '#components/sections/information';
+import { Introduction } from '#components/sections/introduction';
 import type { BlockProps } from '#types/props';
 
 export const Block = ({ blockType, props }: BlockProps) => {
@@ -13,7 +15,9 @@ export const Block = ({ blockType, props }: BlockProps) => {
       return <Facts {...props} />;
     case 'information':
       return <Information {...props} />;
+    case 'introduction':
+      return <Introduction {...props} />;
     default:
-      return <p>Error</p>;
+      return <Error />;
   }
 };
