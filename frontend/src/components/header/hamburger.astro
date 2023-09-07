@@ -1,0 +1,64 @@
+---
+
+---
+
+<button class="header__hamburger">
+  <span class="hamburger__ingredient" />
+</button>
+
+<script>
+  const body = document.body;
+  const hamburger = document.querySelector('.header__hamburger');
+  const navigation = document.querySelector('.header__interactive');
+
+  hamburger?.addEventListener('click', () => {
+    body.style.overflow = body.style.overflow === "hidden" ? "auto" : "hidden";
+    hamburger.classList.toggle('header__hamburger--active');
+    navigation?.classList.toggle('header__interactive--active');
+  });
+</script>
+
+<style lang="scss">
+  @mixin ingredient {
+    @apply bg-neutral-0 h-[3px] w-9;
+  }
+
+  .hamburger__ingredient {
+    @include ingredient;
+    @apply block relative;
+
+    &::after {
+      @apply top-[10px];
+    }
+
+    &::after, &::before {
+      @include ingredient;
+      @apply absolute block left-0 transition-transform;
+      content: '';
+    }
+
+    &::before {
+      @apply -top-[10px];
+    }
+  }
+
+  .header__hamburger {
+    @apply h-7 hidden hover:cursor-pointer;
+
+    &--active {
+      .hamburger__ingredient {
+        &::after {
+          @apply -translate-y-[10px];
+        }
+
+        &::before {
+          @apply translate-y-[10px];
+        }
+      }
+    }
+
+    @screen lg {
+      @apply block;
+    }
+  }
+</style>

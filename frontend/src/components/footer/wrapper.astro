@@ -13,5 +13,9 @@ const { copyright } = footerStore.get();
 <style lang="scss">
   .footer__wrapper {
     @apply flex items-center justify-between wrapper;
+
+    @screen sm {
+      @apply flex-col gap-4;
+    }
   }
 </style>

@@ -11,6 +11,7 @@ export interface BlockProps {
 }
 
 export interface ButtonProps extends LinkProps {
+  additionalClassName?: string;
   className?: string;
   isExternal?: boolean;
   size?: 'medium' | 'small';

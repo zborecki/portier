@@ -5,7 +5,7 @@ import { headerStore } from '#stores/header-store';
 const { navigationItems } = headerStore.get();
 ---
 
-<nav>
+<nav class="header__navigation">
   <ul class="header__navigation-list">
     {
       navigationItems.map(({
@@ -21,8 +21,18 @@ const { navigationItems } = headerStore.get();
 
 <style lang="scss">
   .header {
+    &__navigation {
+      @screen lg {
+        @apply mb-8 mt-8;
+      }
+    }
+
     &__navigation-list {
       @apply flex gap-10;
+
+      @screen lg {
+        @apply flex-col gap-10 items-center;
+      }
     }
   }
 </style>

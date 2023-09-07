@@ -4,6 +4,7 @@ import type { ButtonProps } from '#types/props';
 import '#styles/button.scss';
 
 const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = ({
+  additionalClassName,
   children,
   className,
   isExternal = false,
@@ -17,7 +18,7 @@ const Button: FunctionComponent<PropsWithChildren<ButtonProps>> = ({
     target={isExternal ? '_blank' : '_self'}
     rel="noreferrer"
   >
-    <span className="button__label">
+    <span className={`button__label ${additionalClassName}`}>
       { children }
     </span>
   </a>
