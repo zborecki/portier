@@ -23,6 +23,10 @@ const currentRouteStyle = currentRoute === url ? 'text-neutral-0' : undefined;
   .header {
     &__navigation-link {
       @apply hover:text-neutral-0 text-link transition-colors;
+
+      @screen lg {
+        @apply text-h4;
+      }
     }
   }
 </style>

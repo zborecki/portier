@@ -1,5 +1,6 @@
 ---
 import { Button } from '#components/button';
+import Hamburger from '#components/header/hamburger.astro';
 import Logo from '#components/header/logo.astro';
 import Navigation from '#components/header/navigation.astro';
 import { headerStore } from '#stores/header-store';
@@ -9,10 +10,13 @@ const { button } = headerStore.get();
 
 <div class="header__wrapper">
   <Logo />
+  <Hamburger />
   <div class="header__interactive">
     <Navigation />
     <Button
+      additionalClassName='lg:text-h4'
       isExternal
+      className="lg:w-full"
       size='small'
       url={button.url}
       variant='secondary'
@@ -26,6 +30,14 @@ const { button } = headerStore.get();
   .header {
     &__interactive {
       @apply flex gap-10 items-center;
+
+      @screen lg {
+        @apply fixed hidden;
+
+        &--active {
+          @apply bg-neutral-400 block left-0 min-h-screen px-4 top-[84px] w-full z-50;
+        }
+      }
     }
 
     &__wrapper {
